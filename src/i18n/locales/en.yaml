@@ -1,0 +1,27 @@
+header:
+  home: "Home"
+  adventure: "Fantasy Adventure"
+  dnd: "D&D Race and Class"
+  logo_alt: "Logo"
+
+home:
+  title: "Welcome to Fantasy Decision"
+  subtitle: "Choose what you want to decide."
+  adventure_title: "Fantasy Adventure"
+  adventure_desc: "Make difficult decisions in an epic text-based adventure."
+  dnd_title: "D&D Race and Class"
+  dnd_desc: "Decide which D&D race best fits your playstyle."
+
+adventure:
+  loading: "Loading adventure..."
+  error: "Error loading adventure: {{error}}"
+  error_title: "An error occurred or the adventure has ended."
+  restart: "Restart"
+
+end_screen:
+  title: "The End of Your Journey"
+  restart: "Start a new adventure"
+
+dnd_page:
+  title: "D&D Race and Class"
+  coming_soon: "Coming soon..."

@@ -4,6 +4,7 @@ import type {Epilogue, GameState, Question} from '../types/game';
 interface AdventureData {
     questions: Record<string, Question>;
     epilogues: Record<string, Epilogue>;
+    _filename?: string;
 }
 
 interface AdventureStore {
@@ -41,9 +42,8 @@ export const useAdventureStore = create<AdventureStore>((set, get) => ({
     gameState: getSavedState(),
 
     loadAdventure: async (filename: string) => {
-        // Only load if not already loaded or if different (for future flexibility)
-        // For now, simple check
-        if (get().data && !get().error) return;
+        // Only load if not already loaded or if different
+        if (get().data && !get().error && get().data?._filename === filename) return;
 
         set({isLoading: true, error: null});
         try {
@@ -53,6 +53,8 @@ export const useAdventureStore = create<AdventureStore>((set, get) => ({
                 throw new Error(`Failed to load adventure: ${response.statusText}`);
             }
             const jsonData = await response.json();
+            // Add filename to data to track what's loaded
+            jsonData._filename = filename;
             set({data: jsonData, isLoading: false});
         } catch (err) {
             set({error: err instanceof Error ? err.message : 'Unknown error', isLoading: false});

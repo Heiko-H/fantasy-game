@@ -1,0 +1,27 @@
+header:
+  home: "Startseite"
+  adventure: "Fantasy Abenteuer"
+  dnd: "D&D Rasse und Klasse"
+  logo_alt: "Logo"
+
+home:
+  title: "Willkommen bei Fantasy Decision"
+  subtitle: "Wähle, was du entscheiden möchtest."
+  adventure_title: "Fantasy Abenteuer"
+  adventure_desc: "Triff schwierige Entscheidungen in einem epischen text-basierten Abenteuer."
+  dnd_title: "D&D Rasse und Klasse"
+  dnd_desc: "Entscheide, welches D&D Volk am besten zu deinem Spielstil passt."
+
+adventure:
+  loading: "Abenteuer wird geladen..."
+  error: "Fehler beim Laden des Abenteuers: {{error}}"
+  error_title: "Ein Fehler ist aufgetreten oder das Abenteuer ist zu Ende."
+  restart: "Neustart"
+
+end_screen:
+  title: "Das Ende deiner Reise"
+  restart: "Ein neues Abenteuer beginnen"
+
+dnd_page:
+  title: "D&D Rasse und Klasse"
+  coming_soon: "Demnächst verfügbar..."

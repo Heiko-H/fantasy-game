@@ -1,0 +1,427 @@
+{
+  "questions": {
+    "start": {
+      "id": "start",
+      "story": "The cold morning wind whips through the alleys of Oakhaven as you stand before the city's heavy oak gate. The last gold coins jingle in your pouch, and your gaze wanders over the jagged peaks of the Iron Ridge in the distance. An old messenger handed you a sealed message last night that could change your fate. The air smells of damp earth and the distant smoke of hearth fires. You feel that the time of rest is over and the world is waiting to be shaped by you. With a firm grip on your walking staff, you step out into the unknown.",
+      "questionText": "In which direction does your first step lead you?",
+      "answers": [
+        {
+          "id": "a_1_start_1",
+          "text": "Follow the paved merchant path to the north",
+          "nextQuestionId": "p1"
+        },
+        {
+          "id": "a_1_start_2",
+          "text": "Choose the narrow path into the dense Gloomwood",
+          "nextQuestionId": "p2"
+        },
+        {
+          "id": "a_1_start_3",
+          "text": "Wander along the riverbank to the old ruins",
+          "nextQuestionId": "p3"
+        }
+      ]
+    },
+    "p1": {
+      "id": "p1",
+      "story": "The merchant path is busy, but the faces of the travelers are marked with concern. A troop of heavily armored knights of the city guard overtakes you at a gallop, their banners fluttering wildly in the wind. By the roadside, you see an overturned cart, its cargo – fine silk fabrics and spices – lying in the mud. A young merchant kneels desperately beside it, staring at the broken wheel. The sun burns hot on your head, while the distant walls of the capital glitter on the horizon. The decision to take the official route seems to promise safety, but crime never sleeps.",
+      "questionText": "How do you react to the misfortune by the roadside?",
+      "answers": [
+        {
+          "id": "a_2_p1_1",
+          "text": "Help the merchant repair the cart",
+          "nextQuestionId": "p1_1"
+        },
+        {
+          "id": "a_2_p1_2",
+          "text": "Ignore the incident and follow the knights",
+          "nextQuestionId": "p1_2"
+        },
+        {
+          "id": "a_2_p1_3",
+          "text": "Wait in the shadows and observe the situation",
+          "nextQuestionId": "p1_3"
+        }
+      ]
+    },
+    "p1_1": {
+      "id": "p1_1",
+      "story": "Together with the merchant, you heave the heavy wagon up while he mends the wheel with coarse ropes. Gratefully, he hands you a small, leather-bound folio that he supposedly found in an abandoned crypt. 'This is worth more than my gold,' he whispers, looking around anxiously. Shortly after, you reach a fork in the road leading to a magnificent estate. The guards there wear the Baron's colors, and the atmosphere is strangely tense. You feel that the book in your pocket emits a dark energy that sharpens your senses.",
+      "questionText": "What is your next plan with the mysterious book?",
+      "answers": [
+        {
+          "id": "a_3_p1_1_1",
+          "text": "Hand the book to the Baron as evidence of treason",
+          "nextQuestionId": "p1_1_1"
+        },
+        {
+          "id": "a_3_p1_1_2",
+          "text": "Study the spells within in secret",
+          "nextQuestionId": "p1_1_2"
+        },
+        {
+          "id": "a_3_p1_1_3",
+          "text": "Destroy the book before it brings calamity",
+          "nextQuestionId": "p1_1_3"
+        }
+      ]
+    },
+    "p1_2": {
+      "id": "p1_2",
+      "story": "You follow the tracks of the knights and soon reach a fortified border station, where the air smells of iron and sweat. The captain of the guard, a scarred war veteran, stops you and critically examines your equipment. He reports a band of deserters making the trade routes unsafe and terrorizing the village in the valley. He offers you a fast horse and gold if you join their strike team. Your decision could lead you into the service of the crown or brand you as a mercenary seeking only profit.",
+      "questionText": "Will you join the city guard's fight?",
+      "answers": [
+        {
+          "id": "a_3_p1_2_1",
+          "text": "Sneak into the deserters' hideout as a scout",
+          "nextQuestionId": "p1_2_1"
+        },
+        {
+          "id": "a_3_p1_2_2",
+          "text": "Publicly accuse the captain of corruption",
+          "nextQuestionId": "p1_2_2"
+        },
+        {
+          "id": "a_3_p1_2_3",
+          "text": "Demand a duel against the strongest knight",
+          "nextQuestionId": "p1_2_3"
+        }
+      ]
+    },
+    "p1_3": {
+      "id": "p1_3",
+      "story": "From the dense undergrowth, you observe a group of masked figures stepping out of the forest and surrounding the helpless merchant. They are no ordinary robbers; their weapons glow with an unnatural violet light. They are looking for something specific in the cart and completely ignore the silk fabrics. Your heart hammers against your ribs as you realize you are witnessing a conspiracy that reaches into the Royal Council. One of the masked figures pauses and looks directly in your direction, as if he had sensed your presence through pure magic.",
+      "questionText": "How do you escape discovery by the mages?",
+      "answers": [
+        {
+          "id": "a_3_p1_3_1",
+          "text": "Use a smoke spell for distraction",
+          "nextQuestionId": "p1_3_1"
+        },
+        {
+          "id": "a_3_p1_3_2",
+          "text": "Surrender and offer information",
+          "nextQuestionId": "p1_3_2"
+        },
+        {
+          "id": "a_3_p1_3_3",
+          "text": "Attack the leader of the masked ones from behind",
+          "nextQuestionId": "p1_3_3"
+        }
+      ]
+    },
+    "p2": {
+      "id": "p2",
+      "story": "Gloomwood is aptly named; the sunlight is almost completely swallowed by the massive crowns of the ancient trees. Moss-covered stones and tangled roots make every step a challenge for your balance. You hear the distant, hollow laughter of a forest spirit, sounding like wind in the leaves. Suddenly, you stand before a glowing clearing, in the middle of which stands a circular altar made of white marble. Time seems to stand still here, and the scent of wild thyme numbs your senses. A feeling of deep melancholy and ancient power emanates from this place.",
+      "questionText": "How do you behave in this sacred place?",
+      "answers": [
+        {
+          "id": "a_2_p2_1",
+          "text": "Offer a portion of your provisions on the altar",
+          "nextQuestionId": "p2_1"
+        },
+        {
+          "id": "a_2_p2_2",
+          "text": "Trace the runes on the altar with your fingers",
+          "nextQuestionId": "p2_2"
+        },
+        {
+          "id": "a_2_p2_3",
+          "text": "Draw a protective circle around you and rest",
+          "nextQuestionId": "p2_3"
+        }
+      ]
+    },
+    "p2_1": {
+      "id": "p2_1",
+      "story": "As your bread touches the stone, the altar begins to pulse in a soft golden tone, and the birds in the forest fall silent. An ethereal figure, half woman, half deer, steps out of the mist and looks at you with eyes reflecting the wisdom of eons. She does not speak with words but sends images of a coming darkness directly into your mind. You learn of a betrayal within the forest people that could poison nature itself. The Guardian offers you a staff of living wood, but the price is a bond to this forest for the rest of your life.",
+      "questionText": "Do you accept the fate as Guardian of the Forest?",
+      "answers": [
+        {
+          "id": "a_3_p2_1_1",
+          "text": "Seal the pact and fight the darkness",
+          "nextQuestionId": "p2_1_1"
+        },
+        {
+          "id": "a_3_p2_1_2",
+          "text": "Decline the offer and ask for free passage",
+          "nextQuestionId": "p2_1_2"
+        },
+        {
+          "id": "a_3_p2_1_3",
+          "text": "Try to bind the Guardian by force",
+          "nextQuestionId": "p2_1_3"
+        }
+      ]
+    },
+    "p2_2": {
+      "id": "p2_2",
+      "story": "The moment your fingers touch the cold runes, a bolt of pure energy jolts through you, throwing you to the ground. Your mind is catapulted into a vision of the past, when this forest was still a flourishing kingdom. You see the fall of the last Elven King and the hiding place of his legendary sword, buried deep beneath the roots. When you come to, the altar is split, and a dark crevice leads into the depths of the earth. The air down there is stifling and smells of decay, but the desire for power drives you relentlessly forward.",
+      "questionText": "Will you descend into the dark depths?",
+      "answers": [
+        {
+          "id": "a_3_p2_2_1",
+          "text": "Climb into the crevice armed with a torch",
+          "nextQuestionId": "p2_2_1"
+        },
+        {
+          "id": "a_3_p2_2_2",
+          "text": "Seal the entrance with stones and flee",
+          "nextQuestionId": "p2_2_2"
+        },
+        {
+          "id": "a_3_p2_2_3",
+          "text": "Perform a ritual to call the King's spirit",
+          "nextQuestionId": "p2_2_3"
+        }
+      ]
+    },
+    "p2_3": {
+      "id": "p2_3",
+      "story": "During your rest, you notice small, glowing eyes in the bushes watching you incessantly. They are the kobolds of the forest, known for their cunning but also for their knowledge of hidden treasures. One of them ventures forward and offers you a trade: your sword for a map showing the way to the 'Garden of Dreams'. You know that without your weapon, the dangers of the forest could be fatal, but the legends of the garden promise eternal youth and immeasurable wealth. Greed fights warrior's reason in your chest.",
+      "questionText": "How do you deal with the small forest people?",
+      "answers": [
+        {
+          "id": "a_3_p2_3_1",
+          "text": "Trade the sword for the map",
+          "nextQuestionId": "p2_3_1"
+        },
+        {
+          "id": "a_3_p2_3_2",
+          "text": "Capture the kobold and force the map",
+          "nextQuestionId": "p2_3_2"
+        },
+        {
+          "id": "a_3_p2_3_3",
+          "text": "Ignore the offer and set off immediately",
+          "nextQuestionId": "p2_3_3"
+        }
+      ]
+    },
+    "p3": {
+      "id": "p3",
+      "story": "The ruins of the old fortress loom like petrified fingers against the pale evening sky. Up here, the wind is so strong that it almost whistles the flesh from the bones. You discover a hidden seal on a wall bearing the marks of the fallen Order of the Sun. The ground is littered with the debris of past splendor, and the echo of your steps rings eerily through the empty halls. In the distance, you see the flickering light of a campfire in one of the towers. It could be a friend, or an enemy who has sought refuge from the world up here. Your courage is put to a severe test.",
+      "questionText": "Which secret of the ruins do you want to unravel first?",
+      "answers": [
+        {
+          "id": "a_2_p3_1",
+          "text": "Secretly climb the tower with the campfire",
+          "nextQuestionId": "p3_1"
+        },
+        {
+          "id": "a_2_p3_2",
+          "text": "Search for treasures in the deep cellar vaults",
+          "nextQuestionId": "p3_2"
+        },
+        {
+          "id": "a_2_p3_3",
+          "text": "Try to activate the Sun Seal with magic",
+          "nextQuestionId": "p3_3"
+        }
+      ]
+    },
+    "p3_1": {
+      "id": "p3_1",
+      "story": "At the top of the tower, you find an old woman wrapped in a cloak of raven feathers reading the flames. She does not look up as you enter, but she calls your name as if it had been written in the sparks. 'You look for answers where there are only questions,' she says in a voice that sounds like dry parchment. She offers to look into the future, but every vision requires a drop of your blood. Outside, a storm begins to rage, making the old walls tremble. The line between reality and madness seems to blur up here.",
+      "questionText": "Will you give the blood sacrifice for the seer?",
+      "answers": [
+        {
+          "id": "a_3_p3_1_1",
+          "text": "Give your blood and ask about your end",
+          "nextQuestionId": "p3_1_1"
+        },
+        {
+          "id": "a_3_p3_1_2",
+          "text": "Expose the seer as a witch and attack",
+          "nextQuestionId": "p3_1_2"
+        },
+        {
+          "id": "a_3_p3_1_3",
+          "text": "Look for a safe way out of the storm",
+          "nextQuestionId": "p3_1_3"
+        }
+      ]
+    },
+    "p3_2": {
+      "id": "p3_2",
+      "story": "The cellar vaults are covered with an unnatural frost that freezes your breath into small clouds. Skeletons in armor lie everywhere, still clutching their rusty swords as if guarding a treasure long forgotten. You find a heavy iron door, behind which a rhythmic pounding can be heard – like a giant, stone heart. The magic here is heavy and oppressive, and you feel your life force slowly waning. If you do not act quickly, you will become part of this eternal guard waiting in the darkness for redemption.",
+      "questionText": "How do you open the mysterious iron door?",
+      "answers": [
+        {
+          "id": "a_3_p3_2_1",
+          "text": "Break open the lock with brute force",
+          "nextQuestionId": "p3_2_1"
+        },
+        {
+          "id": "a_3_p3_2_2",
+          "text": "Speak a prayer to the old gods",
+          "nextQuestionId": "p3_2_2"
+        },
+        {
+          "id": "a_3_p3_2_3",
+          "text": "Smear the door with your own blood",
+          "nextQuestionId": "p3_2_3"
+        }
+      ]
+    },
+    "p3_3": {
+      "id": "p3_3",
+      "story": "As you place your hand on the seal and let your inner power flow, the stone breaks open and releases a golden relic. It is the 'Eye of the Sun', an artifact that can dispel darkness but also attracts the attention of dark creatures. Immediately, you hear a scratching sound on the walls – shadow creatures crawl out of the cracks in the floor. The light of the relic burns in your eyes, but it is your only weapon against the approaching flood of darkness. You stand alone against an army that hasn't seen light for centuries.",
+      "questionText": "How do you use the power of the artifact?",
+      "answers": [
+        {
+          "id": "a_3_p3_3_1",
+          "text": "Bundle the light and burn a tunnel free",
+          "nextQuestionId": "p3_3_1"
+        },
+        {
+          "id": "a_3_p3_3_2",
+          "text": "Throw the relic into the depths to save it",
+          "nextQuestionId": "p3_3_2"
+        },
+        {
+          "id": "a_3_p3_3_3",
+          "text": "Transform yourself with the power of the Eye",
+          "nextQuestionId": "p3_3_3"
+        }
+      ]
+    }
+  },
+  "epilogues": {
+    "p1_1_1": {
+      "id": "p1_1_1",
+      "title": "The Baron's Advisor",
+      "text": "Your courage in uncovering the treason earned you a place at court. You now spend your days with political intrigue instead of the sword."
+    },
+    "p1_1_2": {
+      "id": "p1_1_2",
+      "title": "The Dark Scholar",
+      "text": "The power of the book corrupted you. You now live secluded in a tower seeking eternal life, while the realm fears you."
+    },
+    "p1_1_3": {
+      "id": "p1_1_3",
+      "title": "A Simple Wanderer",
+      "text": "You destroyed the calamity and moved on. No one knows your name, but the world has become a bit safer."
+    },
+    "p1_2_1": {
+      "id": "p1_2_1",
+      "title": "Hero of the Border",
+      "text": "Your raid was a complete success. The deserters are defeated, and the village celebrates you as their savior and new protector."
+    },
+    "p1_2_2": {
+      "id": "p1_2_2",
+      "title": "Behind Bars",
+      "text": "Your accusation against the captain failed. Without evidence, you were thrown into the dungeon, where you now reflect on justice."
+    },
+    "p1_2_3": {
+      "id": "p1_2_3",
+      "title": "Fallen Warrior",
+      "text": "The knight was stronger than expected. You died honorably in the duel, and your name will long be sung in the barracks' songs."
+    },
+    "p1_3_1": {
+      "id": "p1_3_1",
+      "title": "Shadow Walker",
+      "text": "You escaped and now know the secret of the conspirators. From the shadows, you now begin your own war."
+    },
+    "p1_3_2": {
+      "id": "p1_3_2",
+      "title": "Traitor of Humanity",
+      "text": "You joined the mages and sold your soul for power. Now you lead the masked hordes against your former home."
+    },
+    "p1_3_3": {
+      "id": "p1_3_3",
+      "title": "A Short Performance",
+      "text": "Your attack was brave, but the magic was too powerful. A cold bolt ended your adventure before it had even truly begun."
+    },
+    "p2_1_1": {
+      "id": "p2_1_1",
+      "title": "The Eternal Guardian",
+      "text": "You sealed the pact. Your legs became roots, and you now watch over the forest until time itself ends."
+    },
+    "p2_1_2": {
+      "id": "p2_1_2",
+      "title": "Banished from the Forest",
+      "text": "The Guardian let you go, but the forest does not forget. You never find your way back and wander forever through desolate lands."
+    },
+    "p2_1_3": {
+      "id": "p2_1_3",
+      "title": "Butcher of Nature",
+      "text": "You vanquished the Guardian, but the forest died with her. You now stand in a dead desert of ash, alone with your power."
+    },
+    "p2_2_1": {
+      "id": "p2_2_1",
+      "title": "King Under the Earth",
+      "text": "You found the sword, but the price was high. You now rule over a kingdom of shadow and dust deep under the mountains."
+    },
+    "p2_2_2": {
+      "id": "p2_2_2",
+      "title": "Cowardice or Wisdom?",
+      "text": "You closed the gate and fled. The world will never know what wonders slumbered down there. You live on as a farmer."
+    },
+    "p2_2_3": {
+      "id": "p2_2_3",
+      "title": "Possessed by the Spirit",
+      "text": "The ritual failed. The King's spirit took over your body and uses your youth to revive his old reign of terror."
+    },
+    "p2_3_1": {
+      "id": "p2_3_1",
+      "title": "Dreamer in Paradise",
+      "text": "You reached the garden. Time no longer matters, and you live in eternal bliss while the world outside perishes."
+    },
+    "p2_3_2": {
+      "id": "p2_3_2",
+      "title": "Plagued by Ill Luck",
+      "text": "The kobold cursed you. Every gold piece you touch turns to stone, and you die lonely and poor in a gutter."
+    },
+    "p2_3_3": {
+      "id": "p2_3_3",
+      "title": "Lost in the Thicket",
+      "text": "Without a map and guidance, you got lost deeper in the forest. The trees seem to close behind you. You were never heard from again."
+    },
+    "p3_1_1": {
+      "id": "p3_1_1",
+      "title": "Marked by Fate",
+      "text": "You now know your end. This knowledge robs you of all joy, and you spend your last days trying to delay the inevitable."
+    },
+    "p3_1_2": {
+      "id": "p3_1_2",
+      "title": "Death of the Seer",
+      "text": "You killed the witch, but the storm tore the tower into the depths. Your body was never found, only your broken staff remained."
+    },
+    "p3_1_3": {
+      "id": "p3_1_3",
+      "title": "Survivalist",
+      "text": "You survived the storm and left the ruins. You are no hero, but you are alive – and sometimes that is enough."
+    },
+    "p3_2_1": {
+      "id": "p3_2_1",
+      "title": "Crushed by Stone",
+      "text": "The trap snapped shut. The ceiling came down and ended your search for wealth under tons of cold rock."
+    },
+    "p3_2_2": {
+      "id": "p3_2_2",
+      "title": "Blessed of Light",
+      "text": "The gods heard you. The door opened to a sacred chamber that filled you with pure light and healed your soul."
+    },
+    "p3_2_3": {
+      "id": "p3_2_3",
+      "title": "Pakt with the Undead",
+      "text": "The blood activated an old curse. You are now the leader of the eternal guard and wait for the next wanderer to release you."
+    },
+    "p3_3_1": {
+      "id": "p3_3_1",
+      "title": "Bringer of Light",
+      "text": "You dispelled the shadows and brought the relic safely to the capital. You are celebrated as the one who brought back the light."
+    },
+    "p3_3_2": {
+      "id": "p3_3_2",
+      "title": "Sacrifice for the World",
+      "text": "You sacrificed yourself to protect the artifact. In the ruins, an eternal fire now burns, guiding travelers on their way."
+    },
+    "p3_3_3": {
+      "id": "p3_3_3",
+      "title": "God-like Being",
+      "text": "The power was too great for a mortal. You are now a being of pure light watching over the world, but can never again be part of it."
+    }
+  }
+}

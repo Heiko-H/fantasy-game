@@ -3,8 +3,10 @@ import {useAdventureStore} from '../store/adventureStore';
 import type {Answer} from '../types/game';
 import QuestionCard from '../components/QuestionCard';
 import EndScreen from '../components/EndScreen';
+import {useTranslation} from 'react-i18next';
 
 const AdventurePage = () => {
+    const {t, i18n} = useTranslation();
     const {
         data,
         isLoading,
@@ -16,8 +18,18 @@ const AdventurePage = () => {
     } = useAdventureStore();
 
     useEffect(() => {
-        loadAdventure('adventure.json');
-    }, [loadAdventure]);
+        const lang = i18n.language.startsWith('de') ? 'de' : 'en';
+        const filename = `adventure_${lang}.json`;
+        loadAdventure(filename);
+    }, [loadAdventure, i18n.language]);
+
+    const handleRestart = () => {
+        resetGame();
+        // Force reload of adventure data if language changed
+        const lang = i18n.language.startsWith('de') ? 'de' : 'en';
+        const filename = `adventure_${lang}.json`;
+        loadAdventure(filename);
+    };
 
     const handleAnswer = (answer: Answer) => {
         if (!data) return;
@@ -41,11 +53,11 @@ const AdventurePage = () => {
     };
 
     if (isLoading) {
-        return <div className="text-center text-xl">Abenteuer wird geladen...</div>;
+        return <div className="text-center text-xl">{t('adventure.loading')}</div>;
     }
 
     if (error) {
-        return <div className="text-center text-red-500">Fehler beim Laden des Abenteuers: {error}</div>;
+        return <div className="text-center text-red-500">{t('adventure.error', {error})}</div>;
     }
 
     if (!data) return null;
@@ -65,16 +77,15 @@ const AdventurePage = () => {
             {gameState.isFinished && currentEpilogue && (
                 <EndScreen
                     epilogue={currentEpilogue}
-                    onRestart={resetGame}
+                    onRestart={handleRestart}
                 />
             )}
 
             {!gameState.isFinished && !currentQuestion && (
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold mb-4">Ein Fehler ist aufgetreten oder das
-                        Abenteuer ist zu Ende.</h1>
-                    <button onClick={resetGame}
-                            className="px-6 py-2 bg-gray-700 rounded hover:bg-gray-600 transition-colors">Neustart
+                    <h1 className="text-3xl font-bold mb-4">{t('adventure.error_title')}</h1>
+                    <button onClick={handleRestart}
+                            className="px-6 py-2 bg-gray-700 rounded hover:bg-gray-600 transition-colors">{t('adventure.restart')}
                     </button>
                 </div>
             )}

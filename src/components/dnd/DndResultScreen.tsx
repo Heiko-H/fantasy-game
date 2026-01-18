@@ -44,7 +44,7 @@ const DndResultScreen: React.FC<DndResultScreenProps> = ({scores, data, onRestar
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 {[
-                    {label: t('dnd_page.race'), value: winnerRace, icon: '🛡️', color: 'from-amber-600/20'},
+                    {label: t('dnd_page.race'), value: winnerRace, icon: '🧝‍♂️', color: 'from-amber-600/20'},
                     {label: t('dnd_page.class'), value: winnerClass, icon: '⚔️', color: 'from-red-600/20'},
                     {label: t('dnd_page.background'), value: winnerBg, icon: '📜', color: 'from-blue-600/20'}
                 ].map((item, i) => (

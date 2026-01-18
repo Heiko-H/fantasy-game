@@ -112,57 +112,81 @@ export const useDndStore = create<DndStore>((set, get) => ({
             }
         });
 
+        // Helper function to check if there's a tie (multiple entries with the same max score)
+        const hasTie = (scores: Record<string, number>) => {
+            const values = Object.values(scores);
+            const max = Math.max(...values);
+            return values.filter(v => v === max).length > 1;
+        };
+
+        const newIndex = gameState.currentIndex + 1;
+        const hasCompletedMinimum = newIndex >= 25;
+        const hasMoreQuestions = newIndex < gameState.randomQuestionIds.length;
+
         // Debug output
         console.log('--- D&D Quiz Scores ---');
+        console.log(`Question ${newIndex} of ${gameState.randomQuestionIds.length} (min: 25)`);
         console.log('Races:', Object.entries(newScores.races).filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]));
         console.log('Classes:', Object.entries(newScores.classes).filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]));
         console.log('Backgrounds:', Object.entries(newScores.backgrounds).filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]));
 
-        const isLastFixedQuestion = gameState.currentIndex === gameState.randomQuestionIds.length - 1;
+        // If we have more questions to go, just move to the next one
+        if (hasMoreQuestions) {
+            set({
+                gameState: {
+                    ...gameState,
+                    scores: newScores,
+                    currentIndex: newIndex
+                }
+            });
+            return;
+        }
 
-        if (isLastFixedQuestion) {
-            // Check for ties
-            const hasTie = (scores: Record<string, number>) => {
-                const values = Object.values(scores);
-                const max = Math.max(...values);
-                return values.filter(v => v === max).length > 1;
-            };
+        // We've answered all current questions - check if we need more due to ties
+        if (hasCompletedMinimum) {
+            const raceTie = hasTie(newScores.races);
+            const classTie = hasTie(newScores.classes);
+            const bgTie = hasTie(newScores.backgrounds);
 
-            if (hasTie(newScores.races) || hasTie(newScores.classes) || hasTie(newScores.backgrounds)) {
-                // Need more questions
+            console.log('Tie check - Races:', raceTie, 'Classes:', classTie, 'Backgrounds:', bgTie);
+
+            if (raceTie || classTie || bgTie) {
+                // Get unused questions
                 const usedIds = new Set(gameState.randomQuestionIds);
                 const availableQuestions = questions.filter(q => !usedIds.has(q.id));
+
                 if (availableQuestions.length > 0) {
-                    const nextQ = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+                    // Add one more random question to break ties
+                    const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+                    const nextQuestion = availableQuestions[randomIndex];
+
+                    console.log(`Adding tie-breaker question ${gameState.extraQuestionsCount + 1}: ${nextQuestion.id}`);
+
                     set({
                         gameState: {
                             ...gameState,
                             scores: newScores,
-                            currentIndex: gameState.currentIndex + 1,
-                            randomQuestionIds: [...gameState.randomQuestionIds, nextQ.id],
+                            currentIndex: newIndex,
+                            randomQuestionIds: [...gameState.randomQuestionIds, nextQuestion.id],
                             extraQuestionsCount: gameState.extraQuestionsCount + 1,
                         }
                     });
                     return;
+                } else {
+                    console.warn('No more questions available to break ties!');
                 }
             }
-
-            set({
-                gameState: {
-                    ...gameState,
-                    scores: newScores,
-                    isFinished: true
-                }
-            });
-        } else {
-            set({
-                gameState: {
-                    ...gameState,
-                    scores: newScores,
-                    currentIndex: gameState.currentIndex + 1
-                }
-            });
         }
+
+        // All questions answered and no ties (or no more questions available)
+        console.log('Quiz finished! Total questions:', newIndex);
+        set({
+            gameState: {
+                ...gameState,
+                scores: newScores,
+                isFinished: true
+            }
+        });
     },
 
     resetQuiz: () => {

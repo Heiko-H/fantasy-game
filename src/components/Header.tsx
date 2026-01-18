@@ -84,14 +84,14 @@ const Header: React.FC = () => {
                         <Link
                             to="adventure"
                             onClick={closeMenu}
-                            className={`text-left px-4 py-3 rounded-md transition-colors ${activePage === '/adventure' ? 'bg-yellow-500/10 text-yellow-500' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}
+                            className={`text-left px-4 py-3 rounded-md transition-colors ${activePage.includes('/adventure') ? 'bg-yellow-500/10 text-yellow-500' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}
                         >
                             {t('header.adventure')}
                         </Link>
                         <Link
                             to="dnd"
                             onClick={closeMenu}
-                            className={`text-left px-4 py-3 rounded-md transition-colors ${activePage === '/dnd' ? 'bg-yellow-500/10 text-yellow-500' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}
+                            className={`text-left px-4 py-3 rounded-md transition-colors ${activePage.includes('/dnd') ? 'bg-yellow-500/10 text-yellow-500' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}
                         >
                             {t('header.dnd')}
                         </Link>

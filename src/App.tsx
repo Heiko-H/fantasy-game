@@ -1,7 +1,7 @@
 import {Route, Routes} from 'react-router-dom';
 import Header from "./components/Header.tsx";
-import DndRacePage from "./components/DndRacePage.tsx";
-import HomePage from "./components/HomePage.tsx";
+import DndRacePage from "./pages/DndRacePage.tsx";
+import HomePage from "./pages/HomePage.tsx";
 import AdventurePage from "./pages/AdventurePage.tsx";
 
 function App() {

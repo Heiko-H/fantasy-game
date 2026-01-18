@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-import type {Epilogue, GameState, Question} from '../types/game';
+import type {Epilogue, GameState, Question} from '../types/index';
 
 interface AdventureData {
     questions: Record<string, Question>;

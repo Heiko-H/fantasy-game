@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
                     className="group relative p-8 rounded-xl bg-gray-900/50 border border-gray-800 hover:border-yellow-500/50 transition-all duration-300 overflow-hidden"
                 >
                     <div
-                        className="absolute inset-0 bg-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity"/>
+                        className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"/>
                     <h3 className="text-2xl font-serif font-bold text-yellow-500 mb-4 uppercase tracking-wider">{t('home.dnd_title')}</h3>
                     <p className="text-gray-400">{t('home.dnd_desc')}</p>
                 </button>

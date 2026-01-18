@@ -1,8 +1,8 @@
 import {useEffect} from 'react';
 import {useAdventureStore} from '../store/adventureStore';
-import type {Answer} from '../types/game';
-import QuestionCard from '../components/QuestionCard';
-import EndScreen from '../components/EndScreen';
+import type {Answer} from '../types/index';
+import QuestionCard from '../components/adventure/QuestionCard';
+import EndScreen from '../components/adventure/EndScreen';
 import {useTranslation} from 'react-i18next';
 
 const AdventurePage = () => {

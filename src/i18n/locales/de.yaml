@@ -1,7 +1,7 @@
 header:
   home: "Startseite"
   adventure: "Fantasy Abenteuer"
-  dnd: "D&D Rasse und Klasse"
+  dnd: "D&D"
   logo_alt: "Logo"
 
 home:
@@ -9,8 +9,8 @@ home:
   subtitle: "Wähle, was du entscheiden möchtest."
   adventure_title: "Fantasy Abenteuer"
   adventure_desc: "Triff schwierige Entscheidungen in einem epischen text-basierten Abenteuer."
-  dnd_title: "D&D Rasse und Klasse"
-  dnd_desc: "Entscheide, welches D&D Volk am besten zu deinem Spielstil passt."
+  dnd_title: "D&D"
+  dnd_desc: "Entscheide, welcher D&D-Charkter am besten zu deinem Spielstil passt."
 
 adventure:
   loading: "Abenteuer wird geladen..."
@@ -23,5 +23,17 @@ end_screen:
   restart: "Ein neues Abenteuer beginnen"
 
 dnd_page:
-  title: "D&D Rasse und Klasse"
-  coming_soon: "Demnächst verfügbar..."
+  title: "D&D"
+  intro: "Entscheide, welches Volk, Klasse und Hintergrund am besten zu dir passt."
+  start_quiz: "Quiz starten"
+  loading: "Lade D&D-Daten..."
+  error: "Fehler: {{error}}"
+  question_of: "Frage {{current}} von {{total}}"
+  progress: "Fortschritt"
+  calculating: "Berechne Ergebnisse..."
+  destiny_revealed: "Charakter-Schicksal enthüllt"
+  result_title: "Du solltest den folgenden Charakter spielen"
+  race: "Volk"
+  class: "Klasse"
+  background: "Hintergrund"
+  restart: "Quiz erneut machen"

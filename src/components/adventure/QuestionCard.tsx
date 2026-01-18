@@ -1,5 +1,5 @@
 import React from 'react';
-import type {Answer, Question} from '../types/game';
+import type {Answer, Question} from '../types/index';
 
 interface QuestionCardProps {
     question: Question;

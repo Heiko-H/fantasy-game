@@ -6,7 +6,11 @@
         "attr_industrious",
         "attr_resilient",
         "attr_stouthearted"
-      ]
+      ],
+      "name": {
+        "en": "Dwarf",
+        "de": "Zwerg"
+      }
     },
     {
       "id": "race_elf",
@@ -14,7 +18,11 @@
         "attr_ethereal",
         "attr_agile",
         "attr_perceptive"
-      ]
+      ],
+      "name": {
+        "en": "Elf",
+        "de": "Elf"
+      }
     },
     {
       "id": "race_halfling",
@@ -22,7 +30,11 @@
         "attr_nimble",
         "attr_optimistic",
         "attr_unobtrusive"
-      ]
+      ],
+      "name": {
+        "en": "Halfling",
+        "de": "Halbling"
+      }
     },
     {
       "id": "race_human",
@@ -30,7 +42,11 @@
         "attr_ambitious",
         "attr_versatile",
         "attr_adaptable"
-      ]
+      ],
+      "name": {
+        "en": "Human",
+        "de": "Mensch"
+      }
     },
     {
       "id": "race_dragonborn",
@@ -38,7 +54,11 @@
         "attr_proud",
         "attr_draconic",
         "attr_formidable"
-      ]
+      ],
+      "name": {
+        "en": "Dragonborn",
+        "de": "Drachenblütiger"
+      }
     },
     {
       "id": "race_gnome",
@@ -46,7 +66,11 @@
         "attr_inquisitive",
         "attr_inventive",
         "attr_whimsical"
-      ]
+      ],
+      "name": {
+        "en": "Gnome",
+        "de": "Gnom"
+      }
     },
     {
       "id": "race_half_elf",
@@ -54,7 +78,11 @@
         "attr_diplomatic",
         "attr_wandering",
         "attr_charismatic"
-      ]
+      ],
+      "name": {
+        "en": "Half-Elf",
+        "de": "Halbelf"
+      }
     },
     {
       "id": "race_half_orc",
@@ -62,7 +90,11 @@
         "attr_menacing",
         "attr_tenacious",
         "attr_brutish"
-      ]
+      ],
+      "name": {
+        "en": "Half-Orc",
+        "de": "Halbork"
+      }
     },
     {
       "id": "race_tiefling",
@@ -70,7 +102,11 @@
         "attr_infernal",
         "attr_mysterious",
         "attr_ominous"
-      ]
+      ],
+      "name": {
+        "en": "Tiefling",
+        "de": "Tiefling"
+      }
     }
   ],
   "classes": [
@@ -80,7 +116,11 @@
         "attr_primal",
         "attr_fierce",
         "attr_unstoppable"
-      ]
+      ],
+      "name": {
+        "en": "Barbarian",
+        "de": "Barbar"
+      }
     },
     {
       "id": "class_bard",
@@ -88,7 +128,11 @@
         "attr_eloquent",
         "attr_inspiring",
         "attr_artistic"
-      ]
+      ],
+      "name": {
+        "en": "Bard",
+        "de": "Barde"
+      }
     },
     {
       "id": "class_cleric",
@@ -96,7 +140,11 @@
         "attr_devout",
         "attr_healing",
         "attr_sacred"
-      ]
+      ],
+      "name": {
+        "en": "Cleric",
+        "de": "Kleriker"
+      }
     },
     {
       "id": "class_druid",
@@ -104,7 +152,11 @@
         "attr_naturalistic",
         "attr_shapeshifting",
         "attr_wild"
-      ]
+      ],
+      "name": {
+        "en": "Druid",
+        "de": "Druide"
+      }
     },
     {
       "id": "class_fighter",
@@ -112,7 +164,11 @@
         "attr_disciplined",
         "attr_martial",
         "attr_tactical"
-      ]
+      ],
+      "name": {
+        "en": "Fighter",
+        "de": "Kämpfer"
+      }
     },
     {
       "id": "class_monk",
@@ -120,7 +176,11 @@
         "attr_serene",
         "attr_ascetic",
         "attr_disciplined_mind"
-      ]
+      ],
+      "name": {
+        "en": "Monk",
+        "de": "Mönch"
+      }
     },
     {
       "id": "class_paladin",
@@ -128,7 +188,11 @@
         "attr_chivalrous",
         "attr_righteous",
         "attr_protective"
-      ]
+      ],
+      "name": {
+        "en": "Paladin",
+        "de": "Paladin"
+      }
     },
     {
       "id": "class_ranger",
@@ -136,7 +200,11 @@
         "attr_tracking",
         "attr_survivalist",
         "attr_vigilant"
-      ]
+      ],
+      "name": {
+        "en": "Ranger",
+        "de": "Waldläufer"
+      }
     },
     {
       "id": "class_rogue",
@@ -144,7 +212,11 @@
         "attr_cunning",
         "attr_stealthy",
         "attr_deft"
-      ]
+      ],
+      "name": {
+        "en": "Rogue",
+        "de": "Schurke"
+      }
     },
     {
       "id": "class_sorcerer",
@@ -152,7 +224,11 @@
         "attr_innate",
         "attr_arcane",
         "attr_spontaneous"
-      ]
+      ],
+      "name": {
+        "en": "Sorcerer",
+        "de": "Zauberer"
+      }
     },
     {
       "id": "class_warlock",
@@ -160,7 +236,11 @@
         "attr_eldritch",
         "attr_pact_bound",
         "attr_occult"
-      ]
+      ],
+      "name": {
+        "en": "Warlock",
+        "de": "Hexenmeister"
+      }
     },
     {
       "id": "class_wizard",
@@ -168,7 +248,11 @@
         "attr_scholarly",
         "attr_studious",
         "attr_methodical"
-      ]
+      ],
+      "name": {
+        "en": "Wizard",
+        "de": "Magier"
+      }
     }
   ],
   "backgrounds": [
@@ -178,7 +262,11 @@
         "attr_pious",
         "attr_theological",
         "attr_reverent"
-      ]
+      ],
+      "name": {
+        "en": "Acolyte",
+        "de": "Akolyth"
+      }
     },
     {
       "id": "bg_charlatan",
@@ -186,7 +274,11 @@
         "attr_deceptive",
         "attr_sly",
         "attr_manipulative"
-      ]
+      ],
+      "name": {
+        "en": "Charlatan",
+        "de": "Scharlatan"
+      }
     },
     {
       "id": "bg_criminal",
@@ -194,7 +286,11 @@
         "attr_lawless",
         "attr_shady",
         "attr_infamous"
-      ]
+      ],
+      "name": {
+        "en": "Criminal",
+        "de": "Krimineller"
+      }
     },
     {
       "id": "bg_entertainer",
@@ -202,7 +298,11 @@
         "attr_captivating",
         "attr_performative",
         "attr_flamboyant"
-      ]
+      ],
+      "name": {
+        "en": "Entertainer",
+        "de": "Unterhalter"
+      }
     },
     {
       "id": "bg_folk_hero",
@@ -210,7 +310,11 @@
         "attr_rustic",
         "attr_courageous",
         "attr_renowned"
-      ]
+      ],
+      "name": {
+        "en": "Folk Hero",
+        "de": "Volksheld"
+      }
     },
     {
       "id": "bg_guild_artisan",
@@ -218,7 +322,11 @@
         "attr_crafty",
         "attr_mercantile",
         "attr_skilled"
-      ]
+      ],
+      "name": {
+        "en": "Guild Artisan",
+        "de": "Gildenhandwerker"
+      }
     },
     {
       "id": "bg_hermit",
@@ -226,7 +334,11 @@
         "attr_reclusive",
         "attr_meditative",
         "attr_solitary"
-      ]
+      ],
+      "name": {
+        "en": "Hermit",
+        "de": "Einsiedler"
+      }
     },
     {
       "id": "bg_noble",
@@ -234,7 +346,11 @@
         "attr_aristocratic",
         "attr_privileged",
         "attr_influential"
-      ]
+      ],
+      "name": {
+        "en": "Noble",
+        "de": "Adliger"
+      }
     },
     {
       "id": "bg_outlander",
@@ -242,7 +358,11 @@
         "attr_hardy",
         "attr_nomadic",
         "attr_rugged"
-      ]
+      ],
+      "name": {
+        "en": "Outlander",
+        "de": "Außenseiter"
+      }
     },
     {
       "id": "bg_sage",
@@ -250,7 +370,11 @@
         "attr_erudite",
         "attr_philosophical",
         "attr_intellectual"
-      ]
+      ],
+      "name": {
+        "en": "Sage",
+        "de": "Gelehrter"
+      }
     },
     {
       "id": "bg_sailor",
@@ -258,7 +382,11 @@
         "attr_nautical",
         "attr_weathered",
         "attr_seafaring"
-      ]
+      ],
+      "name": {
+        "en": "Sailor",
+        "de": "Seefahrer"
+      }
     },
     {
       "id": "bg_soldier",
@@ -266,7 +394,11 @@
         "attr_regimented",
         "attr_battle_hardened",
         "attr_valiant"
-      ]
+      ],
+      "name": {
+        "en": "Soldier",
+        "de": "Soldat"
+      }
     },
     {
       "id": "bg_urchin",
@@ -274,7 +406,421 @@
         "attr_scrappy",
         "attr_streetwise",
         "attr_destitute"
-      ]
+      ],
+      "name": {
+        "en": "Urchin",
+        "de": "Gassenkind"
+      }
     }
-  ]
+  ],
+  "attributes": {
+    "attr_industrious": {
+      "en": "Industrious",
+      "de": "Fleißig"
+    },
+    "attr_resilient": {
+      "en": "Resilient",
+      "de": "Widerstandsfähig"
+    },
+    "attr_stouthearted": {
+      "en": "Stouthearted",
+      "de": "Beherzt"
+    },
+    "attr_ethereal": {
+      "en": "Ethereal",
+      "de": "Ätherisch"
+    },
+    "attr_agile": {
+      "en": "Agile",
+      "de": "Flink"
+    },
+    "attr_perceptive": {
+      "en": "Perceptive",
+      "de": "Wahrnehmungsstark"
+    },
+    "attr_nimble": {
+      "en": "Nimble",
+      "de": "Behend"
+    },
+    "attr_optimistic": {
+      "en": "Optimistic",
+      "de": "Optimistisch"
+    },
+    "attr_unobtrusive": {
+      "en": "Unobtrusive",
+      "de": "Unauffällig"
+    },
+    "attr_ambitious": {
+      "en": "Ambitious",
+      "de": "Ehrgeizig"
+    },
+    "attr_versatile": {
+      "en": "Versatile",
+      "de": "Vielseitig"
+    },
+    "attr_adaptable": {
+      "en": "Adaptable",
+      "de": "Anpassungsfähig"
+    },
+    "attr_proud": {
+      "en": "Proud",
+      "de": "Stolz"
+    },
+    "attr_draconic": {
+      "en": "Draconic",
+      "de": "Drakonisch"
+    },
+    "attr_formidable": {
+      "en": "Formidable",
+      "de": "Ehrfurchtgebietend"
+    },
+    "attr_inquisitive": {
+      "en": "Inquisitive",
+      "de": "Wissbegierig"
+    },
+    "attr_inventive": {
+      "en": "Inventive",
+      "de": "Erfinderisch"
+    },
+    "attr_whimsical": {
+      "en": "Whimsical",
+      "de": "Skurril"
+    },
+    "attr_diplomatic": {
+      "en": "Diplomatic",
+      "de": "Diplomatisch"
+    },
+    "attr_wandering": {
+      "en": "Wandering",
+      "de": "Wanderlustig"
+    },
+    "attr_charismatic": {
+      "en": "Charismatic",
+      "de": "Charismatisch"
+    },
+    "attr_menacing": {
+      "en": "Menacing",
+      "de": "Bedrohlich"
+    },
+    "attr_tenacious": {
+      "en": "Tenacious",
+      "de": "Beharrlich"
+    },
+    "attr_brutish": {
+      "en": "Brutish",
+      "de": "Brutal"
+    },
+    "attr_infernal": {
+      "en": "Infernal",
+      "de": "Infernalisch"
+    },
+    "attr_mysterious": {
+      "en": "Mysterious",
+      "de": "Mysteriös"
+    },
+    "attr_ominous": {
+      "en": "Ominous",
+      "de": "Unheilvoll"
+    },
+    "attr_primal": {
+      "en": "Primal",
+      "de": "Urzeitlich"
+    },
+    "attr_fierce": {
+      "en": "Fierce",
+      "de": "Wild"
+    },
+    "attr_unstoppable": {
+      "en": "Unstoppable",
+      "de": "Unaufhaltsam"
+    },
+    "attr_eloquent": {
+      "en": "Eloquent",
+      "de": "Redegewandt"
+    },
+    "attr_inspiring": {
+      "en": "Inspiring",
+      "de": "Inspirierend"
+    },
+    "attr_artistic": {
+      "en": "Artistic",
+      "de": "Künstlerisch"
+    },
+    "attr_devout": {
+      "en": "Devout",
+      "de": "Fromm"
+    },
+    "attr_healing": {
+      "en": "Healing",
+      "de": "Heilend"
+    },
+    "attr_sacred": {
+      "en": "Sacred",
+      "de": "Heilig"
+    },
+    "attr_naturalistic": {
+      "en": "Naturalistic",
+      "de": "Naturverbunden"
+    },
+    "attr_shapeshifting": {
+      "en": "Shapeshifting",
+      "de": "Gestaltwandelnd"
+    },
+    "attr_wild": {
+      "en": "Wild",
+      "de": "Ungebändigt"
+    },
+    "attr_disciplined": {
+      "en": "Disciplined",
+      "de": "Diszipliniert"
+    },
+    "attr_martial": {
+      "en": "Martial",
+      "de": "Kriegerisch"
+    },
+    "attr_tactical": {
+      "en": "Tactical",
+      "de": "Taktisch"
+    },
+    "attr_serene": {
+      "en": "Serene",
+      "de": "Gelassen"
+    },
+    "attr_ascetic": {
+      "en": "Ascetic",
+      "de": "Asketisch"
+    },
+    "attr_disciplined_mind": {
+      "en": "Disciplined_Mind",
+      "de": "Geistige Disziplin"
+    },
+    "attr_chivalrous": {
+      "en": "Chivalrous",
+      "de": "Ritterlich"
+    },
+    "attr_righteous": {
+      "en": "Righteous",
+      "de": "Rechtschaffen"
+    },
+    "attr_protective": {
+      "en": "Protective",
+      "de": "Beschützend"
+    },
+    "attr_tracking": {
+      "en": "Tracking",
+      "de": "Fährtenlesend"
+    },
+    "attr_survivalist": {
+      "en": "Survivalist",
+      "de": "Überlebenskünstlerisch"
+    },
+    "attr_vigilant": {
+      "en": "Vigilant",
+      "de": "Wachsam"
+    },
+    "attr_cunning": {
+      "en": "Cunning",
+      "de": "Listig"
+    },
+    "attr_stealthy": {
+      "en": "Stealthy",
+      "de": "Heimlich"
+    },
+    "attr_deft": {
+      "en": "Deft",
+      "de": "Geschickt"
+    },
+    "attr_innate": {
+      "en": "Innate",
+      "de": "Angeboren"
+    },
+    "attr_arcane": {
+      "en": "Arcane",
+      "de": "Arkan"
+    },
+    "attr_spontaneous": {
+      "en": "Spontaneous",
+      "de": "Spontan"
+    },
+    "attr_eldritch": {
+      "en": "Eldritch",
+      "de": "Schaurig"
+    },
+    "attr_pact_bound": {
+      "en": "Pact-bound",
+      "de": "Paktgebunden"
+    },
+    "attr_occult": {
+      "en": "Occult",
+      "de": "Okkult"
+    },
+    "attr_scholarly": {
+      "en": "Scholarly",
+      "de": "Gelehrt"
+    },
+    "attr_studious": {
+      "en": "Studious",
+      "de": "Lernbegierig"
+    },
+    "attr_methodical": {
+      "en": "Methodical",
+      "de": "Methodisch"
+    },
+    "attr_pious": {
+      "en": "Pious",
+      "de": "Gottesfürchtig"
+    },
+    "attr_theological": {
+      "en": "Theological",
+      "de": "Theologisch"
+    },
+    "attr_reverent": {
+      "en": "Reverent",
+      "de": "Ehrfürchtig"
+    },
+    "attr_deceptive": {
+      "en": "Deceptive",
+      "de": "Täuschend"
+    },
+    "attr_sly": {
+      "en": "Sly",
+      "de": "Schlau"
+    },
+    "attr_manipulative": {
+      "en": "Manipulative",
+      "de": "Manipulativ"
+    },
+    "attr_lawless": {
+      "en": "Lawless",
+      "de": "Gesetzlos"
+    },
+    "attr_shady": {
+      "en": "Shady",
+      "de": "Zwiellichtig"
+    },
+    "attr_infamous": {
+      "en": "Infamous",
+      "de": "Berüchtigt"
+    },
+    "attr_captivating": {
+      "en": "Captivating",
+      "de": "Fesselnd"
+    },
+    "attr_performative": {
+      "en": "Performative",
+      "de": "Darbietend"
+    },
+    "attr_flamboyant": {
+      "en": "Flamboyant",
+      "de": "Extravagant"
+    },
+    "attr_rustic": {
+      "en": "Rustic",
+      "de": "Ländlich"
+    },
+    "attr_courageous": {
+      "en": "Courageous",
+      "de": "Mutig"
+    },
+    "attr_renowned": {
+      "en": "Renowned",
+      "de": "Renommiert"
+    },
+    "attr_crafty": {
+      "en": "Crafty",
+      "de": "Handwerklich"
+    },
+    "attr_mercantile": {
+      "en": "Mercantile",
+      "de": "Kaufmännisch"
+    },
+    "attr_skilled": {
+      "en": "Skilled",
+      "de": "Geschult"
+    },
+    "attr_reclusive": {
+      "en": "Reclusive",
+      "de": "Einsiedlerisch"
+    },
+    "attr_meditative": {
+      "en": "Meditative",
+      "de": "Meditativ"
+    },
+    "attr_solitary": {
+      "en": "Solitary",
+      "de": "Einzelgängerisch"
+    },
+    "attr_aristocratic": {
+      "en": "Aristocratic",
+      "de": "Aristokratisch"
+    },
+    "attr_privileged": {
+      "en": "Privileged",
+      "de": "Privilegiert"
+    },
+    "attr_influential": {
+      "en": "Influential",
+      "de": "Einflussreich"
+    },
+    "attr_hardy": {
+      "en": "Hardy",
+      "de": "Abgehärtet"
+    },
+    "attr_nomadic": {
+      "en": "Nomadic",
+      "de": "Nomadisch"
+    },
+    "attr_rugged": {
+      "en": "Rugged",
+      "de": "Robust"
+    },
+    "attr_erudite": {
+      "en": "Erudite",
+      "de": "Belesen"
+    },
+    "attr_philosophical": {
+      "en": "Philosophical",
+      "de": "Philosophisch"
+    },
+    "attr_intellectual": {
+      "en": "Intellectual",
+      "de": "Intellektuell"
+    },
+    "attr_nautical": {
+      "en": "Nautical",
+      "de": "Nautisch"
+    },
+    "attr_weathered": {
+      "en": "Weathered",
+      "de": "Wettergegerbt"
+    },
+    "attr_seafaring": {
+      "en": "Seafaring",
+      "de": "Seefahrend"
+    },
+    "attr_regimented": {
+      "en": "Regimented",
+      "de": "Regimentiert"
+    },
+    "attr_battle_hardened": {
+      "en": "Battle-hardened",
+      "de": "Kampferprobt"
+    },
+    "attr_valiant": {
+      "en": "Valiant",
+      "de": "Tapfer"
+    },
+    "attr_scrappy": {
+      "en": "Scrappy",
+      "de": "Rauflustig"
+    },
+    "attr_streetwise": {
+      "en": "Streetwise",
+      "de": "Straßenerfahren"
+    },
+    "attr_destitute": {
+      "en": "Destitute",
+      "de": "Mittellos"
+    }
+  }
 }

@@ -1,7 +1,7 @@
 header:
   home: "Home"
   adventure: "Fantasy Adventure"
-  dnd: "D&D Race and Class"
+  dnd: "D&D"
   logo_alt: "Logo"
 
 home:
@@ -9,8 +9,8 @@ home:
   subtitle: "Choose what you want to decide."
   adventure_title: "Fantasy Adventure"
   adventure_desc: "Make difficult decisions in an epic text-based adventure."
-  dnd_title: "D&D Race and Class"
-  dnd_desc: "Decide which D&D race best fits your playstyle."
+  dnd_title: "D&D"
+  dnd_desc: "Decide which D&D character best fits your playstyle."
 
 adventure:
   loading: "Loading adventure..."
@@ -23,5 +23,17 @@ end_screen:
   restart: "Start a new adventure"
 
 dnd_page:
-  title: "D&D Race and Class"
-  coming_soon: "Coming soon..."
+  title: "D&D"
+  intro: "Decide which race, class, and background suits you best."
+  start_quiz: "Start Quiz"
+  loading: "Loading D&D data..."
+  error: "Error: {{error}}"
+  question_of: "Question {{current}} of {{total}}"
+  progress: "Progress"
+  calculating: "Calculating results..."
+  destiny_revealed: "Character Destiny Revealed"
+  result_title: "You should play the following character"
+  race: "Race"
+  class: "Class"
+  background: "Background"
+  restart: "Take the Quiz Again"

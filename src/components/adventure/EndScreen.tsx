@@ -1,5 +1,5 @@
 import React from 'react';
-import type {Epilogue} from '../types/game';
+import type {Epilogue} from '../types/index';
 import {useTranslation} from 'react-i18next';
 
 interface EndScreenProps {

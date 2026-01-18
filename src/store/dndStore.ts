@@ -16,9 +16,9 @@ interface DndStore {
 }
 
 const initialScores = (data: DndData) => ({
-    races: Object.fromEntries(data.races.map(r => [r.id, 0])),
-    classes: Object.fromEntries(data.classes.map(c => [c.id, 0])),
-    backgrounds: Object.fromEntries(data.backgrounds.map(b => [b.id, 0])),
+    races: Object.fromEntries(data.races.map((r: { id: string; name: Record<string, string>; attributeIds: string[] }) => [r.id, 0])),
+    classes: Object.fromEntries(data.classes.map((c: { id: string; name: Record<string, string>; attributeIds: string[] }) => [c.id, 0])),
+    backgrounds: Object.fromEntries(data.backgrounds.map((b: { id: string; name: Record<string, string>; attributeIds: string[] }) => [b.id, 0])),
 });
 
 export const useDndStore = create<DndStore>((set, get) => ({
@@ -68,7 +68,7 @@ export const useDndStore = create<DndStore>((set, get) => ({
             [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
         }
 
-        const selectedIds = shuffled.slice(0, 25).map(q => q.id);
+        const selectedIds = shuffled.slice(0, 25).map((q: DndQuestion) => q.id);
 
         set({
             gameState: {
@@ -86,7 +86,7 @@ export const useDndStore = create<DndStore>((set, get) => ({
         if (!gameState || !questions || !data) return;
 
         const currentQuestionId = gameState.randomQuestionIds[gameState.currentIndex];
-        const question = questions.find(q => q.id === currentQuestionId);
+        const question = questions.find((q: DndQuestion) => q.id === currentQuestionId);
         if (!question) return;
 
         const selectedAttributes = question.attributeIds[answerIndex];
@@ -96,17 +96,17 @@ export const useDndStore = create<DndStore>((set, get) => ({
             backgrounds: {...gameState.scores.backgrounds},
         };
 
-        selectedAttributes.forEach(attrId => {
+        selectedAttributes.forEach((attrId: string) => {
             // Find which category this attribute belongs to
-            const race = data.races.find(r => r.attributeIds.includes(attrId));
+            const race = data.races.find((r: { id: string; name: Record<string, string>; attributeIds: string[] }) => r.attributeIds.includes(attrId));
             if (race) {
                 newScores.races[race.id] = (newScores.races[race.id] || 0) + 1;
             }
-            const cls = data.classes.find(c => c.attributeIds.includes(attrId));
+            const cls = data.classes.find((c: { id: string; name: Record<string, string>; attributeIds: string[] }) => c.attributeIds.includes(attrId));
             if (cls) {
                 newScores.classes[cls.id] = (newScores.classes[cls.id] || 0) + 1;
             }
-            const bg = data.backgrounds.find(b => b.attributeIds.includes(attrId));
+            const bg = data.backgrounds.find((b: { id: string; name: Record<string, string>; attributeIds: string[] }) => b.attributeIds.includes(attrId));
             if (bg) {
                 newScores.backgrounds[bg.id] = (newScores.backgrounds[bg.id] || 0) + 1;
             }
@@ -116,7 +116,7 @@ export const useDndStore = create<DndStore>((set, get) => ({
         const hasTie = (scores: Record<string, number>) => {
             const values = Object.values(scores);
             const max = Math.max(...values);
-            return values.filter(v => v === max).length > 1;
+            return values.filter((v: number) => v === max).length > 1;
         };
 
         const newIndex = gameState.currentIndex + 1;
@@ -126,9 +126,9 @@ export const useDndStore = create<DndStore>((set, get) => ({
         // Debug output
         console.log('--- D&D Quiz Scores ---');
         console.log(`Question ${newIndex} of ${gameState.randomQuestionIds.length} (min: 25)`);
-        console.log('Races:', Object.entries(newScores.races).filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]));
-        console.log('Classes:', Object.entries(newScores.classes).filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]));
-        console.log('Backgrounds:', Object.entries(newScores.backgrounds).filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]));
+        console.log('Races:', Object.entries(newScores.races).filter(([, s]: [string, number]) => s > 0).sort((a: [string, number], b: [string, number]) => b[1] - a[1]));
+        console.log('Classes:', Object.entries(newScores.classes).filter(([, s]: [string, number]) => s > 0).sort((a: [string, number], b: [string, number]) => b[1] - a[1]));
+        console.log('Backgrounds:', Object.entries(newScores.backgrounds).filter(([, s]: [string, number]) => s > 0).sort((a: [string, number], b: [string, number]) => b[1] - a[1]));
 
         // If we have more questions to go, just move to the next one
         if (hasMoreQuestions) {
@@ -153,7 +153,7 @@ export const useDndStore = create<DndStore>((set, get) => ({
             if (raceTie || classTie || bgTie) {
                 // Get unused questions
                 const usedIds = new Set(gameState.randomQuestionIds);
-                const availableQuestions = questions.filter(q => !usedIds.has(q.id));
+                const availableQuestions = questions.filter((q: DndQuestion) => !usedIds.has(q.id));
 
                 if (availableQuestions.length > 0) {
                     // Add one more random question to break ties

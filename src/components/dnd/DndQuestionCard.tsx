@@ -1,6 +1,6 @@
 import React from 'react';
 import {useTranslation} from 'react-i18next';
-import type {DndQuestionTranslation} from '../types/index';
+import type {DndQuestionTranslation} from '../../types/index';
 
 interface DndQuestionCardProps {
     question: DndQuestionTranslation;
@@ -47,7 +47,7 @@ const DndQuestionCard: React.FC<DndQuestionCardProps> = ({question, onAnswer, cu
             </div>
 
             <div className="grid grid-cols-1 gap-4">
-                {question.answers.map((answer, index) => (
+                {question.answers.map((answer: { id: string; text: string }, index: number) => (
                     <button
                         key={answer.id}
                         onClick={() => handleAnswerClick(index)}

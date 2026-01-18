@@ -1,6 +1,6 @@
 import React from 'react';
 import {useTranslation} from 'react-i18next';
-import type {DndData} from '../types/index';
+import type {DndData} from '../../types/index';
 
 interface DndResultScreenProps {
     scores: {
@@ -24,9 +24,9 @@ const DndResultScreen: React.FC<DndResultScreenProps> = ({scores, data, onRestar
     const winnerClassId = getWinner(scores.classes);
     const winnerBgId = getWinner(scores.backgrounds);
 
-    const winnerRace = data.races.find(r => r.id === winnerRaceId)?.name[lang] || data.races.find(r => r.id === winnerRaceId)?.name['en'] || winnerRaceId;
-    const winnerClass = data.classes.find(c => c.id === winnerClassId)?.name[lang] || data.classes.find(c => c.id === winnerClassId)?.name['en'] || winnerClassId;
-    const winnerBg = data.backgrounds.find(b => b.id === winnerBgId)?.name[lang] || data.backgrounds.find(b => b.id === winnerBgId)?.name['en'] || winnerBgId;
+    const winnerRace = data.races.find((r: { id: string; name: Record<string, string>; attributeIds: string[] }) => r.id === winnerRaceId)?.name[lang] || data.races.find((r: { id: string; name: Record<string, string>; attributeIds: string[] }) => r.id === winnerRaceId)?.name['en'] || winnerRaceId;
+    const winnerClass = data.classes.find((c: { id: string; name: Record<string, string>; attributeIds: string[] }) => c.id === winnerClassId)?.name[lang] || data.classes.find((c: { id: string; name: Record<string, string>; attributeIds: string[] }) => c.id === winnerClassId)?.name['en'] || winnerClassId;
+    const winnerBg = data.backgrounds.find((b: { id: string; name: Record<string, string>; attributeIds: string[] }) => b.id === winnerBgId)?.name[lang] || data.backgrounds.find((b: { id: string; name: Record<string, string>; attributeIds: string[] }) => b.id === winnerBgId)?.name['en'] || winnerBgId;
 
     return (
         <div
@@ -47,7 +47,7 @@ const DndResultScreen: React.FC<DndResultScreenProps> = ({scores, data, onRestar
                     {label: t('dnd_page.race'), value: winnerRace, icon: '🧝‍♂️', color: 'from-amber-600/20'},
                     {label: t('dnd_page.class'), value: winnerClass, icon: '⚔️', color: 'from-red-600/20'},
                     {label: t('dnd_page.background'), value: winnerBg, icon: '📜', color: 'from-blue-600/20'}
-                ].map((item, i) => (
+                ].map((item: { label: string; value: string; icon: string; color: string }, i: number) => (
                     <div key={i}
                          className={`relative overflow-hidden p-8 rounded-2xl bg-gradient-to-br ${item.color} to-gray-800/40 border border-gray-700/50 flex flex-col items-center text-center group hover:border-red-500/50 transition-all duration-500`}>
                         <div

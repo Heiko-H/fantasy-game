@@ -3,7 +3,7 @@ import {useTranslation} from 'react-i18next';
 import {useDndStore} from '../store/dndStore';
 import DndQuestionCard from '../components/dnd/DndQuestionCard';
 import DndResultScreen from '../components/dnd/DndResultScreen';
-import type {DndQuestionTranslation} from '../types/index';
+import type {DndQuestion, DndQuestionTranslation} from '../types/index';
 
 const DndRacePage: React.FC = () => {
     const {t, i18n} = useTranslation();
@@ -62,7 +62,7 @@ const DndRacePage: React.FC = () => {
     }
 
     const currentQuestionId = gameState.randomQuestionIds[gameState.currentIndex];
-    const questionData = gameState && questions ? questions.find(q => q.id === currentQuestionId) : null;
+    const questionData = gameState && questions ? questions.find((q: DndQuestion) => q.id === currentQuestionId) : null;
     const lang = i18n.language.split('-')[0]; // Handle cases like 'de-DE'
 
     if (!questionData) {
@@ -72,7 +72,7 @@ const DndRacePage: React.FC = () => {
     const currentQuestion: DndQuestionTranslation = {
         id: questionData.id,
         questionText: questionData.translations[lang]?.question || questionData.translations['en']?.question || '',
-        answers: (questionData.translations[lang]?.answers || questionData.translations['en']?.answers || []).map((text, index) => ({
+        answers: (questionData.translations[lang]?.answers || questionData.translations['en']?.answers || []).map((text: string, index: number) => ({
             id: `${questionData.id}_a_${index}`,
             text: text
         }))

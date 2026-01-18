@@ -1,5 +1,5 @@
 import React from 'react';
-import type {Answer, Question} from '../types/index';
+import type {Answer, Question} from '../../types/index';
 
 interface QuestionCardProps {
     question: Question;
@@ -35,7 +35,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({question, onAnswer}) => {
             </div>
 
             <div className="grid grid-cols-1 gap-4">
-                {question.answers.map((answer, index) => (
+                {question.answers.map((answer: Answer, index: number) => (
                     <button
                         key={answer.id}
                         onClick={() => handleAnswerClick(answer)}

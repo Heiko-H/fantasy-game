@@ -32,7 +32,23 @@ Languages:
 - `en` (English)
 - `de` (German)
 
-The generator must output **valid JSON only** (no markdown, no explanations) that matches the schema below.
+### Interaction contract (to prevent premature generation)
+
+This prompt is a **two-phase protocol**.
+
+**Phase A — Input collection (interactive):**
+- Your job is to detect any missing/invalid placeholders from section 1.
+- If anything is missing or invalid, you must **stop** and ask only for the missing items.
+- You must not generate any questions/answers, IDs, or JSON during Phase A.
+
+**Phase B — Generation (non-interactive):**
+- Only after all required inputs are present and valid, you ask for a final confirmation:
+    - Output exactly: `CONFIRM_GENERATION (yes/no)`
+    - Wait for the user's answer.
+- If the user answers `yes`, you generate the dataset.
+- If the user answers `no`, you stop and ask what to change.
+
+**Final output rule:** in Phase B, after confirmation, output **valid JSON only** (no markdown, no explanations) that matches the schema below.
 
 The JSON you return is the exact contents that will be saved to `public/data/dnd/{{DATASET_ID}}.json`.
 
@@ -41,6 +57,57 @@ The JSON you return is the exact contents that will be saved to `public/data/dnd
 ## 1) Inputs (provided by the prompt engineer)
 
 Fill these placeholders when you run the prompt:
+
+### Recommended input format (copy/paste as a single block)
+
+Provide the inputs as a single JSON object so nothing is ambiguous:
+
+```json
+{
+    "datasetId": "",
+    "mode": "provided|invented|derived",
+    "questionCount": 0,
+    "fantasyPercent": 80,
+    "answerTypes": [
+        {
+            "id": "at_example",
+            "translations": {
+                "en": { "name": "Example" },
+                "de": { "name": "Beispiel" }
+            }
+        }
+    ],
+    "answerTypeDerivationRule": "",
+    "answerTypeScopeHint": ""
+}
+```
+
+Interpretation rules:
+- If `mode = provided`: use `answerTypes` as provided; `ANSWER_TYPE_COUNT = answerTypes.length`; `ANSWERS_PER_QUESTION = ANSWER_TYPE_COUNT`.
+- If `mode = invented`: ignore `answerTypes` content; only use its desired count if provided separately; otherwise you must ask for `answerTypeCount`.
+- If `mode = derived`: use `answerTypeDerivationRule` (+ optional `answerTypeScopeHint`) and derive the full list; `ANSWER_TYPE_COUNT = derivedCount`; `ANSWERS_PER_QUESTION = ANSWER_TYPE_COUNT`.
+
+### Required inputs checklist (must be complete before generating anything)
+
+The following are required:
+- `datasetId` (must satisfy the filename rules from section 0)
+- `mode` (one of: `provided`, `invented`, `derived`)
+- `questionCount` (integer ≥ 1)
+- `fantasyPercent` (integer 0–100)
+- Plus mode-specific requirements:
+    - Provided mode: `answerTypes` with `id`, `translations.en.name`, `translations.de.name` for each entry.
+    - Invented mode: either `answerTypeCount` (integer ≥ 2) OR a clear instruction like “invent N archetypes”.
+    - Derived mode: `answerTypeDerivationRule` (non-empty string); `answerTypeScopeHint` optional.
+
+If any required input is missing/invalid, you must respond with **only** the following block and nothing else:
+
+```text
+MISSING_INPUTS
+- <field>: <what you need>
+- <field>: <what you need>
+```
+
+Do not proceed until the user has provided everything.
 
 - **Dataset / namespace id**: `{{DATASET_ID}}`
     - Short, stable identifier to prevent ID collisions across datasets (examples: `dnd_races_core`, `public_jobs_v1`).
